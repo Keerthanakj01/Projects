@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laptops</title>
+    <style>
+      #Header1 {
+        /* margin-top: -20px; */
+        margin-top: -25px;
+        font-size: 30px;
+        font-style: italic;
+        background-color: #0a0000;
+        text-align: center;
+        color: white;
+      }
+      #div1 {
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        color: black;
+      }
+      #div2 {
+        margin-left: 70px;
+        width: 300px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+
+      img {
+        width: 200px;
+        height: 150px;
+      }
+      img:hover {
+        zoom: 110%;
+      }
+      button {
+        background-color: rgb(255, 255, 255, 0.4);
+        color: black;
+        border-radius: 10px;
+      }
+      h4 {
+        background-color: rgb(255, 255, 255, 0.4);
+        text-align: center;
+        color: red;
+      }
+
+      #filter {
+        position: relative;
+        top: 0;
+        left: 70%;
+        margin-bottom: 30px;
+      }
+      #search {
+        position: relative;
+        top: 0;
+        left: 65%;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="Header1"><p>Shop Laptops</p></header>
+    <input
+      type="search"
+      id="search"
+      placeholder="Search here"
+      onkeyup="search(this.value)"
+    />
+
+    <select id="filter" onchange="filterProducts(this.value)">
+      <option value="All">All</option>
+      <option value="instock">In stock</option>
+      <option value="outofstock">Out of Stock</option>
+    </select>
+
+    <div id="div1"></div>
+
+    <script src="test2.js"></script>
+  </body>
+</html>
